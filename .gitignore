@@ -1,1 +1,2 @@
 node_modules
+# .env lưu khi để private và public thì k đưa lên github
