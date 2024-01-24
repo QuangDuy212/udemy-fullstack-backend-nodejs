@@ -1,19 +1,6 @@
-const connection = require('../config/database');
+const connection = require("../config/database");
 const getHomepage = (req, res) => {
-
-  let users = [];
-
-  connection.query(
-    'select * from Users u ',
-    function (err, results, fields) {
-      users = results;
-      console.log(">>>result homepage= ", results);// results contains rows returned by server
-
-      console.log('>>>check users : ', users);
-      res.send(JSON.stringify(users));
-    }
-  )
-
+  return res.render("home.ejs");
 };
 
 const getABC = (red, res) => {
@@ -28,5 +15,5 @@ const getHoiDanIT = (req, res) => {
 module.exports = {
   getHomepage,
   getABC,
-  getHoiDanIT
+  getHoiDanIT,
 };
