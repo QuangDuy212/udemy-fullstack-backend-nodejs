@@ -5,6 +5,7 @@ const {
   getHoiDanIT,
   postCreateUser,
   getCreatePage,
+  getUpdatePage,
 } = require("../controllers/homeController.js");
 const router = express.Router();
 
@@ -14,6 +15,7 @@ router.get("/abc", getABC);
 
 router.get("/hoidanit", getHoiDanIT);
 router.get("/create", getCreatePage);
+router.get("/update/:id", getUpdatePage);
 
 //post
 router.post("/create-user", postCreateUser);
